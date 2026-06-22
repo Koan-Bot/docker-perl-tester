@@ -77,7 +77,7 @@ jobs:
         debian-version: [buster,bookworm,trixie]
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
@@ -98,7 +98,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
@@ -121,7 +121,7 @@ jobs:
       matrix:
         perl-version: ${{ fromJson (needs.prepare-matrix-buster.outputs.perl-versions) }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
@@ -142,7 +142,7 @@ jobs:
       matrix:
         perl-version: ${{ fromJson(needs.prepare-matrix-bookworm-extra.outputs.perl-versions) }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
@@ -163,7 +163,7 @@ jobs:
       matrix:
         perl-version: ${{ fromJson(needs.prepare-matrix-bookworm-defaults.outputs.perl-versions) }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
@@ -184,7 +184,7 @@ jobs:
         matrix:
           perl-version: ${{ fromJson(needs.prepare-matrix-trixie-defaults.outputs.perl-versions) }}
       steps:
-        - uses: actions/checkout@v6
+        - uses: actions/checkout@v7
         - name: Publish to Registry
           uses: elgohr/Publish-Docker-Github-Action@v5
           with:
